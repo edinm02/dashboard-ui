@@ -1,0 +1,19 @@
+<mat-card>
+  <h2>All Ongoing Tasks</h2>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="taskID">
+      <mat-header-cell *matHeaderCellDef> Task ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.taskID}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="taskName">
+      <mat-header-cell *matHeaderCellDef> Task Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.taskName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="cost">
+      <mat-header-cell *matHeaderCellDef> Cost </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cost}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</mat-card>
