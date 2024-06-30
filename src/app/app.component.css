@@ -83,4 +83,7 @@ mat-card {
 
 .tasks-table, .monthly-chart {
   width: 48%;
+  box-shadow: 0 9px 9px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
